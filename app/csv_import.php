@@ -1,5 +1,5 @@
 <?php
-include_once '../setting/koneksi.php';
+require_once '../setting/koneksi.php';
 if (($handle = fopen("backup\data.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
       $data[0]=preg_replace('/[--]/',' ', $data[0]);
