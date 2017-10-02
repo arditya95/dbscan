@@ -1,17 +1,16 @@
 <?php
 include_once '../../../setting/koneksi.php';
 if (isset($_POST['submit'])) {
-  $nama = $_POST['nama'];
+  $x = $_POST['x'];
+  $y = $_POST['y'];
   $deskripsi = $_POST['deskripsi'];
-  $id = $_POST['id'];
-  $sql="UPDATE tb_kingdom SET nama_kingdom = '$nama', deskripsi_kingdom = '$deskripsi'
-  WHERE id_kingdom = '$id';";
+  $sql="INSERT INTO tmp (x_point, y_point) VALUES ('$x','$y');";
   mysqli_query($con,$sql);
   if($sql)
   {
     echo "<script language=javascript>
     alert('Data Berhasil Disimpan');
-    location.href='../../../route.php?kode=data_kingdom';</script>";
+    location.href='../../../route.php?kode=data_point';</script>";
   }
   else
   {

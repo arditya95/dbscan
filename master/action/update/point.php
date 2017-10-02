@@ -16,27 +16,25 @@
         <div class="col-md-6">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <label>Edit Kingdom</label>
+              <label>Edit Point</label>
             </div>
 
             <?php
               include_once '../../../setting/koneksi.php';
-              $sql=("SELECT * FROM tb_kingdom WHERE id_kingdom = '$_GET[id]'");
+              $sql=("SELECT * FROM tmp WHERE id = '$_GET[id]'");
               $result = mysqli_query($con,$sql);
               $baris=mysqli_fetch_array($result);
             ?>
 
             <div class="panel-body">
-              <form class="form-horizontal" action="update_kingdom.php" method="post">
+              <form class="form-horizontal" action="update_point.php" method="post">
                 <div class="container-fluid">
                   <div class="form-group">
-                    <input type="hidden" class="form-control" name="id" value="<?php echo $baris['id_kingdom'];?>">
-                    <label for="nama">Nama Kingdom</label>
-                    <input type="text" class="form-control" name="nama" value="<?php echo $baris['nama_kingdom'];?>">
-                  </div>
-                  <div class="form-group">
-                    <label for="deskripsi">Deskripsi</label>
-                    <textarea class="form-control" name="deskripsi" rows="8" cols="80"><?php echo $baris['deskripsi_kingdom'];?></textarea>
+                    <input type="hidden" class="form-control" name="id" value="<?php echo $baris['id'];?>">
+                    <label for="x">Point X</label>
+                    <input type="text" class="form-control" name="x" value="<?php echo $baris['x_point'];?>">
+                    <label for="y">Point Y</label>
+                    <input type="text" class="form-control" name="y" value="<?php echo $baris['y_point'];?>">
                   </div>
                 </div>
                 <input type="submit" name="submit" class="btn btn-primary" value="Save">

@@ -16,18 +16,16 @@
         <div class="col-md-6">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <label>Tambah Kingdom</label>
+              <label>Tambah Point</label>
             </div>
             <div class="panel-body">
-              <form class="form-horizontal" action="insert_kingdom.php" method="post">
+              <form class="form-horizontal" action="insert_point.php" method="post">
                 <div class="container-fluid">
                   <div class="form-group">
-                    <label for="nama">Nama Kingdom : </label>
-                    <input type="text" class="form-control" name="nama">
-                  </div>
-                  <div class="form-group">
-                    <label for="deskripsi">Deskripsi : </label>
-                    <textarea class="form-control" name="deskripsi" rows="8" cols="80"></textarea>
+                    <label for="x">X : </label>
+                    <input type="text" class="form-control" name="x">
+                    <label for="y">Y : </label>
+                    <input type="text" class="form-control" name="y">
                   </div>
                 </div>
                 <input type="submit" name="submit" class="btn btn-primary" value="Save">

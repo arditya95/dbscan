@@ -15,8 +15,11 @@
                 if (!isset($_GET['d']) && !isset($_GET['p']) && !isset($_GET['kode'])) {
                     include ('master/index.php');
                 } elseif (isset($_GET['kode'])) {
-                  if ($_GET['kode']=="data_kingdom") {
-                    require_once 'master/data/kingdom.php';
+                  if ($_GET['kode']=="data_point") {
+                    require_once 'master/data/point.php';
+                  }
+                  else if ($_GET['kode']=="data_cluster") {
+                    require_once 'master/data/cluster.php';
                   }
                   else {
                     if (!isset($_GET['d'])) {
@@ -32,7 +35,7 @@
                     } else {
                       include ('master/index.php');
                     }
-                    // require_once 'master/data/kingdom.php';
+                    // require_once 'master/data/point.php';
                   }
                 }
                 else {
@@ -49,7 +52,7 @@
                   } else {
                     include ('master/index.php');
                   }
-                  // require_once 'master/data/kingdom.php';
+                  // require_once 'master/data/point.php';
                 }
              ?>
             <!-- END -->

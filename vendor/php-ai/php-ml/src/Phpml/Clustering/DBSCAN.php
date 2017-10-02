@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 namespace Phpml\Clustering;
-
+ini_set('memory_limit', '-1');// memory limit
 use Phpml\Math\Distance;
 use Phpml\Math\Distance\Euclidean;
 

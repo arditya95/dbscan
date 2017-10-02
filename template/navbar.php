@@ -21,7 +21,10 @@
                             <a href="#"><i class="fa fa-table"></i> Master Data<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="route.php?kode=data_kingdom"><i class="fa fa-table"></i> Record Data</a>
+                                    <a href="route.php?kode=data_point"><i class="fa fa-table"></i> Record Data</a>
+                                </li>
+                                <li>
+                                    <a href="route.php?kode=data_cluster"><i class="fa fa-table"></i> Record Cluster</a>
                                 </li>
                                 </li>
                             </ul>
