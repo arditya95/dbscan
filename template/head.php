@@ -8,6 +8,8 @@
 <!-- <link href="dist/bootgrid/jquery.bootgrid.min.css" rel="stylesheet"> -->
 <!-- Bootstrap Core CSS -->
 <link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- bootstrap-datetimepicker -->
+<link href="dist\bootstrap-datetimepicker\css\bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <!-- MetisMenu CSS -->
 <link href="dist/metisMenu/metisMenu.min.css" rel="stylesheet">
 <!-- Timeline CSS -->

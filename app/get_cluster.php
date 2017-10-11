@@ -16,6 +16,8 @@ use Phpml\Clustering\DBSCAN;
 
     $epsilon=$_POST['eps'];
     $minSamples=$_POST['minpts'];
+    $start=$_POST['start'];
+    $end=$_POST['end'];
 
     // TODO: SELECT data yang digunakan dalam dbscan
     $points=array();

@@ -5,6 +5,9 @@
 <script src="dist/jquery/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="dist/bootstrap/js/bootstrap.min.js"></script>
+<!-- bootstrap-datetimepicker -->
+<script type="text/javascript" src="dist\bootstrap-datetimepicker\js\bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="dist\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <!-- Metis Menu Plugin JavaScript -->
 <script src="dist/metisMenu/metisMenu.min.js"></script>
 <!-- Custom Theme JavaScript -->
@@ -16,6 +19,40 @@
 <!-- Custom Theme JavaScript -->
 <script src="dist/js/sb-admin-2.js"></script>
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+        showMeridian: 1
+    });
+  $('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    forceParse: 0
+    });
+  $('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 1,
+    minView: 0,
+    maxView: 1,
+    forceParse: 0
+    });
+</script>
 
 <script>
   var muncul = 0;
