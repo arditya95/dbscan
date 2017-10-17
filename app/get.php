@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
     }
   }
   else {
-    $sql="SELECT * FROM tmp;";
+    $sql="SELECT * FROM tb_point;";
     $all_record=mysqli_query($con,$sql);
     while ($row = mysqli_fetch_array($all_record)){
       $array_point = array("x_point" => $row['x_point'], "y_point" => $row['y_point']);
