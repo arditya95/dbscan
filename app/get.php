@@ -23,8 +23,8 @@ $end=$_POST['end'];
 $points=array();
 if (isset($_POST['submit'])) {
   if (!empty($_POST['start']) && !empty($_POST['end'])) {
-    echo "Start Date : $start <br> End Date : $end <br>";
-    $sql_date="SELECT * FROM tmp WHERE x_point BETWEEN '$start' AND '$end'";
+    // echo "Start Date : $start <br> End Date : $end <br>";
+    $sql_date="SELECT * FROM tb_point WHERE x_point BETWEEN '$start' AND '$end'";
     $all_record=mysqli_query($con,$sql_date);
     while ($row = mysqli_fetch_array($all_record)){
       $array_point = array("x_point" => $row['x_point'], "y_point" => $row['y_point']);
@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 
   // TODO: membongkar array
   foreach ($data as $data_lv1) {
-    echo "[CLUSTER] => $countlv1 <br>";
+    // echo "[CLUSTER] => $countlv1 <br>";
     $countlv2=1;
     foreach ($data_lv1 as $data_lv2) {
       $datas[] = $data_lv2;
@@ -63,8 +63,8 @@ if (isset($_POST['submit'])) {
 
       // TODO: jika data tidak doubel maka di input ke database
       if ($row_coun==0) {
-        print_r($data_lv2);
-        echo "[TITIK] => $countlv2 <br>";
+        // print_r($data_lv2);
+        // echo "[TITIK] => $countlv2 <br>";
         $sql_input="INSERT INTO tb_cluster (x_point, y_point, cluster_num) VALUES ('$data_lv2[x_point]', '$data_lv2[y_point]', '$countlv1');";
         // echo "$sql_input <br>";
         mysqli_query($con,$sql_input);
@@ -79,4 +79,6 @@ if (isset($_POST['submit'])) {
 else {
   // header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
+exec('php -q gnuplot.php');
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>

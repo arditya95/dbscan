@@ -5,12 +5,12 @@ class GnuPlot {
 	const UNIT_BLANK	= '';
 	const UNIT_INCH 	= 'in';
 	const UNIT_CM		= 'cm';
-	
+
 	// Available terminals
 	const TERMINAL_PNG	= 'png';
 	const TERMINAL_PDF	= 'pdf';
 	const TERMINAL_EPS	= 'eps';
-	
+
     // Values as an array
     protected $values = array();
 
@@ -21,14 +21,14 @@ class GnuPlot {
     protected $timeFormatString = null;
 
     // Display mode
-    protected $mode = 'line';
+    protected $mode = 'points';
 
     // Plot width
     protected $width = 1200;
 
     // Plot height
     protected $height = 800;
-	
+
 	// Size unit.
 	protected $unit = self::UNIT_BLANK;
 
@@ -154,7 +154,7 @@ class GnuPlot {
 
         return $this;
     }
-	
+
 	/**
      * Sets the graph size unit. You can use one of the UNIT_ constants defined in this class.
      */
@@ -233,7 +233,7 @@ class GnuPlot {
         $this->plotted = true;
         $this->sendData();
     }
-	
+
 	/**
      * Write the current plot to a file
      */
@@ -252,7 +252,7 @@ class GnuPlot {
     {
         $this->write(self::TERMINAL_PNG, $file);
     }
-	
+
 	/**
      * Write the current plot to a PDF file
      */
@@ -260,7 +260,7 @@ class GnuPlot {
 	{
 		$this->write(self::TERMINAL_PDF, $file);
 	}
-	
+
 	/**
      * Write the current plot to an EPS file
      */
